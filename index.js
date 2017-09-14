@@ -45,7 +45,7 @@ function viewCart() {
       case 3:
         var begarr = cartitems.slice(0,cartitems.length-1)
         var endarr = cartitems.slice(cartitems.length-1,cartitems.length)
-        console.log((`In your cart, you have${begarr}, and${endarr}`))
+        console.log((`In your cart, you have${begarr}, and${endarr}.`))
         break;
     }
   	}
