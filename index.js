@@ -30,7 +30,7 @@ function viewCart() {
         var prices = itemsprices[items]
         cartitems.push(`${items} at ${prices}`)
   		}
-  	switch(cartitems.length){
+  	switch(cartsize){
       case 0:
         console.log("Your shopping cart is empty.")
         break;
