@@ -22,6 +22,7 @@ function addToCart(item) {
 }
 
 function viewCart() {
+    var cartsize = cart.length
     var cartitems = []
     for (i = 0; i<cart.length; i++){
         var itemsprices = cart[i]
