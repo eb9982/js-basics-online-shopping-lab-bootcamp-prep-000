@@ -28,7 +28,7 @@ function viewCart() {
         var itemsprices = cart[i]
         var items = Object.keys(itemsprices)[0]
         var prices = itemsprices[items]
-        cartitems.push(`${items} at ${prices}`)
+        cartitems.push(`${items} at ${prices} `)
   		}
   	switch(cartsize){
       case 0:
