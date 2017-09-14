@@ -28,19 +28,19 @@ function viewCart() {
         var itemsprices = cart[i]
         var items = Object.keys(itemsprices)[0]
         var prices = itemsprices[items]
-        cartitems.push(`${items} at ${prices}`)
+        cartitems.push(` ${items} at ${prices}`)
   		}
   	switch(cartsize){
       case 0:
         console.log("Your shopping cart is empty.")
         break;
       case 1:
-        console.log(`In your cart, you have ${cartitems}`)
+        console.log(`In your cart, you have ${cartitems}.`)
         break;
       case 2:
         var begarr = cartitems.slice(0,1)
         var endarr = cartitems.slice(1,2)
-        console.log(`In your cart, you have ${begarr} and ${endarr}`)
+        console.log(`In your cart, you have ${begarr} and ${endarr}.`)
         break;
       case 3:
         var begarr = cartitems.slice(0,cartitems.length-1)
