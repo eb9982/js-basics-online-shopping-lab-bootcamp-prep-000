@@ -36,6 +36,7 @@ function viewCart() {
         break;
       case 1:
         console.log(`In your cart, you have ${cartitems}`)
+        break;
       case 2:
         var begarr = cartitems.slice(0,1)
         var endarr = cartitems.slice(1,2)
