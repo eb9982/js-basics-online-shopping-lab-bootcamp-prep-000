@@ -22,32 +22,31 @@ function addToCart(item) {
 }
 
 function viewCart() {
-  itemarr = []
-  pricearr = []
-  for (var i = 0; i < cart.length; i++) {
-    pricearr.push(Object.values(cart[i]))
-    itemarr.push(Object.keys(cart[i]))
-  }
-  return itemarr
-  if(cart.length === 0){
-      console.log('Your shopping cart is empty.')
+    var cartitems = []
+    for (i = 0; i<cart.length; i++){
+        var itemsprices = cart[i]
+        var items = Object.keys(itemsprices)[0]
+        var prices = itemsprices[items]
+        cartitems.push(`${items} at ${prices}`)
+  		}
+  	switch(cartitems.length){
+      case 0:
+        console.log("Your shopping cart is empty.")
+        break;
+      case 1:
+        console.log(`In your cart, you have ${cartitems}`)
+      case 2:
+        var begarr = cartitems.slice(0,1)
+        var endarr = cartitems.slice(1,2)
+        console.log(`In your cart, you have ${begarr.} and ${endarr}`)
+        break;
+      case 3:
+        var begarr = cartitems.slice(0,cartitems.length-1)
+        var endarr = cartitems.slice(cartitems.length-1,cartitems.length)
+        console.log((`In your cart, you have ${begarr} and ${endarr}`))
+        break;
     }
-  else {
-    firstcart = []
-    lastcart = []
-    for (var i = 0; i < cart.length; i++) {
-      if (i < cart.length - 1) {
-        for (var itemName in cart[i]){
-          firstcart.push(itemName + 'at' + cart[i][itemName])
-      }
-
-      else {
-        lastcart.push(itemName + 'at' + cart[i][itemName])
-      }
-    }
-    return firstcart
-  }
-}
+  	}
 
 function total() {
   // write your code here
