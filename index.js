@@ -59,7 +59,7 @@ function total() {
       cartprices.push(prices)
     }
   parseInt(cartprices)
-  var x= cartprices.reduce((a,b)=>a+b,0)
+  var x = cartprices.reduce((a,b)=>a+b,0)
   return x
 }
 
