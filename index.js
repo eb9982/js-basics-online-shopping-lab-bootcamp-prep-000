@@ -70,13 +70,12 @@ function removeFromCart(item) {
       itemlist.push(items)
     }
   var removeitem = itemlist.indexOf(item)
-  return itemlist
   if (removeitem == -1) {
     console.log("That item is not in your cart.")
   }
   else {
     cart.splice(removeitem, 1)
-    return cart
+    console.log(`${item} has been removed.`)
   }
 }
 
