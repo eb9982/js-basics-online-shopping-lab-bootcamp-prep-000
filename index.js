@@ -63,11 +63,11 @@ function total() {
 }
 
 function removeFromCart(item) {
-  var items = []
+  var itemlist = []
   for (let i = 0; i<cart.length; i++){
       var itemsprices = cart[i]
       var items = Object.keys(itemsprices)[0]
-      items.push(items)
+      itemlist.push(items)
     }
     return items
   var removeitem = items.indexOf(item)
