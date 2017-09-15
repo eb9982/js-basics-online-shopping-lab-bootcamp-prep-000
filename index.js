@@ -69,6 +69,7 @@ function removeFromCart(item) {
       var items = Object.keys(itemsprices)[0]
       items.push(item)
     }
+    return items
   var removeitem = items.indexOf(item)
   cart.slice(removeitem)
 }
