@@ -63,7 +63,7 @@ function total() {
 }
 
 function removeFromCart(item) {
-  var removeitem = array.indexOf(item)
+  var removeitem = cart.indexOf(item)
   cart.slice(removeitem)
 }
 
