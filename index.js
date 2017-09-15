@@ -70,8 +70,8 @@ function removeFromCart(item) {
       itemlist.push(items)
     }
   var removeitem = itemlist.indexOf(item)
-  return removeitem
-  cart.slice(removeitem)
+  cart = cart.splice(removeitem, 1)
+  return cart
 }
 
 function placeOrder(cardNumber) {
