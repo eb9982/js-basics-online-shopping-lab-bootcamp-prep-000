@@ -51,7 +51,15 @@ function viewCart() {
   	}
 
 function total() {
-  // write your code here
+  var cartprices =[]
+  for (let i = 0; i<cart.length; i++){
+      var itemsprices = cart[i]
+      var items = Object.keys(itemsprices)[0]
+      var prices = itemsprices[items]
+      cartprices.push(prices)
+    }
+  cartprices.reduce((a,b)=>a+b,0)
+  return cartprices
 }
 
 function removeFromCart(item) {
