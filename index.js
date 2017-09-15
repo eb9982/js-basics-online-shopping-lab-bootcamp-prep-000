@@ -70,8 +70,14 @@ function removeFromCart(item) {
       itemlist.push(items)
     }
   var removeitem = itemlist.indexOf(item)
-  cart = cart.splice(removeitem, 1)
-  return cart
+  return itemlist
+  if (removeitem == -1) {
+    console.log("That item is not in your cart.")
+  }
+  else {
+    cart.splice(removeitem, 1)
+    return cart
+  }
 }
 
 function placeOrder(cardNumber) {
