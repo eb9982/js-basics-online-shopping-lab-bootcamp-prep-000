@@ -58,8 +58,9 @@ function total() {
       var prices = itemsprices[items]
       cartprices.push(prices)
     }
+  parseInt(cartprices)
   var x= cartprices.reduce((a,b)=>a+b,0)
-  return cartprices
+  return x
 }
 
 function removeFromCart(item) {
